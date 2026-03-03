@@ -6,7 +6,8 @@
 
 ![HACS][hacs-shield]
 
-Customised version to manually choose tahe airtouch console.a
+> [!IMPORTANT]
+> This is a **standalone fork** of the original Polyaire AirTouch integration, maintained for specific enhancements (like manual console selection).
 
 Integration to integrate with the [Polyaire AirTouch][polyaire-airtouch] smart air conditioner controller.
 
@@ -38,7 +39,7 @@ This integration can be added to Home Assistant using HACS:
 [![Add integration][my-hass-add-integration-img]][my-hass-add-integration]
 
 ### Manual
-1. Download the latest release from [here](https://github.com/thenoctambulist/hass-airtouch/releases).
+1. Download the latest release from [here](https://github.com/auTrevor/hass-airtouch/releases).
 1. Create a folder called `custom_components` in the same directory as the Home Assistant `configuration.yaml`.
 1. Extract the contents of the zip into folder called `airtouch` inside `custom_components`.
 1. Restart Home Assistant
@@ -390,7 +391,7 @@ target:
 ### Damper to Temperature Control
 An automation blueprint to automatically reset AirTouch zones back to temperature control after they have been set to damper control for a configurable period of time.
 
-[![Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint pre-filled.](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.github.com%2FTheNoctambulist%2F251584ad965a4d9721ad8c179eee1726)
+[![Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint pre-filled.](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2FauTrevor%2Fhass-airtouch%2Fblob%2Fmain%2Fblueprints%2Fdamper_to_temperature.yaml)
 
 ## :yellow_heart: Say Thank You
 If you like this integration, please :star: the repository.
@@ -404,8 +405,8 @@ If you would like to make a donation as appreciation of my work:
 [right-arrow]: ./images/right-arrow.png
 
 [polyaire-airtouch]: https://www.airtouch.net.au/
-[commits-shield]: https://img.shields.io/github/commit-activity/y/thenoctambulist/hass-airtouch.svg
-[commits]: https://github.com/thenoctambulist/hass-airtouch/commits/main
+[commits-shield]: https://img.shields.io/github/commit-activity/y/auTrevor/hass-airtouch.svg
+[commits]: https://github.com/auTrevor/hass-airtouch/commits/main
 [hacs-shield]: https://img.shields.io/badge/HACS-Default-blue.svg
 [hass-binary]: https://www.home-assistant.io/integrations/binary_sensor/
 [hass-climate]: https://www.home-assistant.io/integrations/climate/
@@ -414,8 +415,8 @@ If you would like to make a donation as appreciation of my work:
 [hass-sensor]: https://www.home-assistant.io/integrations/sensor/
 [hass-time]: https://www.home-assistant.io/integrations/time/
 [hass-update]: https://www.home-assistant.io/integrations/update/
-[license-shield]: https://img.shields.io/github/license/thenoctambulist/hass-airtouch.svg
+[license-shield]: https://img.shields.io/github/license/auTrevor/hass-airtouch.svg
 [my-hass-add-integration-img]: https://my.home-assistant.io/badges/config_flow_start.svg
 [my-hass-add-integration]: https://my.home-assistant.io/redirect/config_flow_start/?domain=airtouch
-[releases-shield]: https://img.shields.io/github/release/thenoctambulist/hass-airtouch.svg
-[releases]: https://github.com/thenoctambulist/hass-airtouch/releases
+[releases-shield]: https://img.shields.io/github/release/auTrevor/hass-airtouch.svg
+[releases]: https://github.com/auTrevor/hass-airtouch/releases
