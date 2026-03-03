@@ -17,7 +17,6 @@ from homeassistant.helpers import selector
 
 from .const import (
     AT4_DEFAULT_PORT,
-    AT5_DEFAULT_PORT,
     CONF_MANUAL_CONNECTION,
     CONF_MINOR_VERSION,
     CONF_MODEL,
@@ -101,7 +100,7 @@ class AirTouchConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             host = user_input[CONF_HOST]
             port = user_input[CONF_PORT]
 
-            # Convert model name to enum (using getattr since we store enum member names)
+            # Convert model name to enum (using getattr since we store enummember names)
             model = getattr(pyairtouch.AirTouchModel, model_name)
 
             # Try to connect to validate the configuration
@@ -127,9 +126,8 @@ class AirTouchConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     self._abort_if_unique_id_configured()
 
                     return await self.async_step_settings()
-                else:
-                    await airtouch.shutdown()
-                    errors["base"] = "cannot_connect"
+                await airtouch.shutdown()
+                errors["base"] = "cannot_connect"
             except Exception:  # noqa: BLE001
                 errors["base"] = "cannot_connect"
 
@@ -334,7 +332,7 @@ class AirTouchConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         }
 
         # Add manual connection data if applicable
-        if self.context.get(CONF_MANUAL_CONNECTION):  # type: ignore[literal-required]
+        if self.context.get(CONF_MANUAL_CONNECTION):
             entry_data[CONF_MANUAL_CONNECTION] = True
             entry_data[CONF_MODEL] = self.context[CONF_MODEL]  # type: ignore[literal-required]
             entry_data[CONF_PORT] = self.context[CONF_PORT]  # type: ignore[literal-required]
