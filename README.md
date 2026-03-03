@@ -6,7 +6,7 @@
 
 ![HACS][hacs-shield]
 
-Customised version to manually choose the airtouch console.
+Customised version to manually choose tahe airtouch console.a
 
 Integration to integrate with the [Polyaire AirTouch][polyaire-airtouch] smart air conditioner controller.
 
